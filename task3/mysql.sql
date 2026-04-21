@@ -28,13 +28,14 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `project2` (
-  `id` varchar(30) NOT NULL,
+  `id` int(11) NOT NULL,
   `Receiving Date` date NOT NULL,
-  `Tracking Number` int(50) NOT NULL,
+  `Tracking Number` varchar(50) NOT NULL,
   `Product Name` varchar(50) NOT NULL,
-  `CBM` varchar(50) NOT NULL,
-  `Weight` int(50) NOT NULL
+  `CBM` decimal(10,2) NOT NULL,
+  `Weight` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 --
 -- Indexes for dumped tables
