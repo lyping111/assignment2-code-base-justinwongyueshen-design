@@ -39,7 +39,15 @@ CREATE TABLE `project2` (
 --
 -- Indexes for dumped tables
 --
+UPDATE `project2` SET `id` = UUID() WHERE `id` = '';
 
+delete from `project2` where `id` is null;
+
+alter table `project2` modify `id` varchar(30) not null;
+  add column abc varchar(30) not null;
+
+alter table `project2` drop column abc;
+  drop table `project2`;
 --
 -- Indexes for table `project2`
 --
